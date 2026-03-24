@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="mr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Admin Panel – The Daily Herald</title>
+  <title>प्रशासक पॅनेल – दैनिक हेराल्ड</title>
   <link rel="stylesheet" href="../css/admin.css">
 </head>
 <body>
@@ -13,20 +13,20 @@
   ══════════════════════════════ -->
   <div id="login-page" class="login-page">
     <div class="login-card">
-      <div class="login-logo">The Daily Herald</div>
-      <div class="login-subtitle">Admin Panel</div>
-      <h2>Sign In</h2>
+      <div class="login-logo">दैनिक हेराल्ड</div>
+      <div class="login-subtitle">प्रशासक पॅनेल</div>
+      <h2>साइन इन करा</h2>
       <div class="login-error" id="login-error"></div>
       <form id="login-form" autocomplete="off">
         <div class="form-group">
-          <label for="login-password">Password</label>
-          <input type="password" id="login-password" placeholder="Enter admin password" required autocomplete="current-password">
+          <label for="login-password">संकेतशब्द</label>
+          <input type="password" id="login-password" placeholder="प्रशासक संकेतशब्द प्रविष्ट करा" required autocomplete="current-password">
         </div>
         <button type="submit" class="btn btn-primary btn-full" style="margin-top:8px">
-          🔐 Login
+          🔐 लॉगिन
         </button>
       </form>
-      <p style="margin-top:16px;font-size:0.78rem;color:#bbb">Default password: <code>admin123</code></p>
+      <p style="margin-top:16px;font-size:0.78rem;color:#bbb">डीफॉल्ट संकेतशब्द: <code>admin123</code></p>
     </div>
   </div>
 
@@ -36,38 +36,38 @@
   <div id="admin-page" class="admin-layout hidden">
 
     <!-- SIDEBAR -->
-    <nav class="admin-sidebar" id="admin-sidebar" aria-label="Admin navigation">
+    <nav class="admin-sidebar" id="admin-sidebar" aria-label="प्रशासक नेव्हिगेशन">
       <div class="sidebar-header">
-        <div class="sidebar-logo">The Daily Herald</div>
-        <div class="sidebar-tagline">Admin Panel</div>
+        <div class="sidebar-logo">दैनिक हेराल्ड</div>
+        <div class="sidebar-tagline">प्रशासक पॅनेल</div>
       </div>
 
       <div class="sidebar-nav">
-        <div class="sidebar-section-label">Main</div>
+        <div class="sidebar-section-label">मुख्य</div>
         <a href="#" data-section="dashboard" class="active">
-          <span class="nav-icon">📊</span> Dashboard
+          <span class="nav-icon">📊</span> डॅशबोर्ड
         </a>
 
-        <div class="sidebar-section-label">Content</div>
+        <div class="sidebar-section-label">सामग्री</div>
         <a href="#" data-section="news">
-          <span class="nav-icon">📰</span> News Articles
+          <span class="nav-icon">📰</span> बातम्या लेख
         </a>
         <a href="#" data-section="ads">
-          <span class="nav-icon">📣</span> Advertisements
+          <span class="nav-icon">📣</span> जाहिराती
         </a>
         <a href="#" data-section="videos">
-          <span class="nav-icon">▶️</span> YouTube Videos
+          <span class="nav-icon">▶️</span> YouTube व्हिडिओ
         </a>
 
-        <div class="sidebar-section-label">Account</div>
+        <div class="sidebar-section-label">खाते</div>
         <a href="#" data-section="settings">
-          <span class="nav-icon">⚙️</span> Settings
+          <span class="nav-icon">⚙️</span> सेटिंग्ज
         </a>
       </div>
 
       <div class="sidebar-footer">
         <a href="#" id="logout-btn">
-          <span>🚪</span> Logout
+          <span>🚪</span> लॉगआउट
         </a>
       </div>
     </nav>
@@ -78,13 +78,13 @@
       <!-- TOP BAR -->
       <div class="admin-topbar">
         <div style="display:flex;align-items:center;gap:8px">
-          <button class="sidebar-toggle" id="sidebar-toggle" aria-label="Toggle sidebar">☰</button>
-          <span class="page-title" id="page-title">Dashboard</span>
+          <button class="sidebar-toggle" id="sidebar-toggle" aria-label="साइडबार टॉगल करा">☰</button>
+          <span class="page-title" id="page-title">डॅशबोर्ड</span>
         </div>
         <div class="topbar-actions">
-          <a href="../index.html" target="_blank" id="visit-site" class="btn btn-outline btn-sm">🌐 View Site</a>
+          <a href="../index.html" target="_blank" id="visit-site" class="btn btn-outline btn-sm">🌐 साइट पहा</a>
           <a href="#" id="logout-btn-top" class="btn btn-danger btn-sm"
-             onclick="document.getElementById('logout-btn').click();return false">🚪 Logout</a>
+             onclick="document.getElementById('logout-btn').click();return false">🚪 लॉगआउट</a>
         </div>
       </div>
 
@@ -97,45 +97,45 @@
               <div class="stat-icon red">📰</div>
               <div class="stat-info">
                 <div class="stat-value" id="stat-news">0</div>
-                <div class="stat-label">Published Articles</div>
+                <div class="stat-label">प्रकाशित लेख</div>
               </div>
             </div>
             <div class="stat-card">
               <div class="stat-icon orange">⭐</div>
               <div class="stat-info">
                 <div class="stat-value" id="stat-featured">0</div>
-                <div class="stat-label">Featured Articles</div>
+                <div class="stat-label">वैशिष्ट्यीकृत लेख</div>
               </div>
             </div>
             <div class="stat-card">
               <div class="stat-icon blue">📣</div>
               <div class="stat-info">
                 <div class="stat-value" id="stat-ads">0</div>
-                <div class="stat-label">Active Ads</div>
+                <div class="stat-label">सक्रिय जाहिराती</div>
               </div>
             </div>
             <div class="stat-card">
               <div class="stat-icon green">▶️</div>
               <div class="stat-info">
                 <div class="stat-value" id="stat-videos">0</div>
-                <div class="stat-label">YouTube Videos</div>
+                <div class="stat-label">YouTube व्हिडिओ</div>
               </div>
             </div>
           </div>
 
           <div class="panel">
             <div class="panel-header">
-              <span class="panel-title">Recent Articles</span>
-              <button class="btn btn-primary btn-sm" onclick="adminApp.openNewsModal()">+ Add Article</button>
+              <span class="panel-title">अलीकडील लेख</span>
+              <button class="btn btn-primary btn-sm" onclick="adminApp.openNewsModal()">+ लेख जोडा</button>
             </div>
             <div style="overflow-x:auto">
               <table class="data-table">
                 <thead>
                   <tr>
-                    <th>Title</th>
-                    <th>Category</th>
-                    <th>Date</th>
-                    <th>Actions</th>
+                    <th>शीर्षक</th>
+                    <th>वर्ग</th>
+                    <th>दिनांक</th>
+                    <th>क्रिया</th>
                   </tr>
                 </thead>
                 <tbody id="recent-news-body"></tbody>
@@ -148,25 +148,25 @@
         <div class="section-page" id="section-news">
           <div class="panel">
             <div class="panel-header">
-              <span class="panel-title">All Articles</span>
-              <button class="btn btn-primary btn-sm" onclick="adminApp.openNewsModal()">+ Add Article</button>
+              <span class="panel-title">सर्व लेख</span>
+              <button class="btn btn-primary btn-sm" onclick="adminApp.openNewsModal()">+ लेख जोडा</button>
             </div>
             <div class="panel-body" style="padding-bottom:0">
               <div class="filter-row">
-                <input type="text" id="news-search" placeholder="Search articles…" style="flex:1;max-width:320px">
+                <input type="text" id="news-search" placeholder="लेख शोधा…" style="flex:1;max-width:320px">
               </div>
             </div>
             <div style="overflow-x:auto">
               <table class="data-table">
                 <thead>
                   <tr>
-                    <th style="width:70px">Image</th>
-                    <th>Title</th>
-                    <th>Category</th>
-                    <th>Author</th>
-                    <th>Date</th>
-                    <th>Status</th>
-                    <th>Actions</th>
+                    <th style="width:70px">प्रतिमा</th>
+                    <th>शीर्षक</th>
+                    <th>वर्ग</th>
+                    <th>लेखक</th>
+                    <th>दिनांक</th>
+                    <th>स्थिती</th>
+                    <th>क्रिया</th>
                   </tr>
                 </thead>
                 <tbody id="news-tbody"></tbody>
@@ -179,23 +179,23 @@
         <div class="section-page" id="section-ads">
           <div class="panel">
             <div class="panel-header">
-              <span class="panel-title">All Advertisements</span>
-              <button class="btn btn-primary btn-sm" onclick="adminApp.openAdModal()">+ Add Ad</button>
+              <span class="panel-title">सर्व जाहिराती</span>
+              <button class="btn btn-primary btn-sm" onclick="adminApp.openAdModal()">+ जाहिरात जोडा</button>
             </div>
             <div class="panel-body" style="padding-bottom:0">
               <div class="filter-row">
-                <input type="text" id="ads-search" placeholder="Search ads…" style="flex:1;max-width:320px">
+                <input type="text" id="ads-search" placeholder="जाहिराती शोधा…" style="flex:1;max-width:320px">
               </div>
             </div>
             <div style="overflow-x:auto">
               <table class="data-table">
                 <thead>
                   <tr>
-                    <th style="width:80px">Image</th>
-                    <th>Title</th>
-                    <th>Link</th>
-                    <th>Position</th>
-                    <th>Actions</th>
+                    <th style="width:80px">प्रतिमा</th>
+                    <th>शीर्षक</th>
+                    <th>दुवा</th>
+                    <th>स्थान</th>
+                    <th>क्रिया</th>
                   </tr>
                 </thead>
                 <tbody id="ads-tbody"></tbody>
@@ -208,22 +208,22 @@
         <div class="section-page" id="section-videos">
           <div class="panel">
             <div class="panel-header">
-              <span class="panel-title">YouTube Videos</span>
-              <button class="btn btn-primary btn-sm" onclick="adminApp.openVideoModal()">+ Add Video</button>
+              <span class="panel-title">YouTube व्हिडिओ</span>
+              <button class="btn btn-primary btn-sm" onclick="adminApp.openVideoModal()">+ व्हिडिओ जोडा</button>
             </div>
             <div class="panel-body" style="padding-bottom:0">
               <div class="filter-row">
-                <input type="text" id="videos-search" placeholder="Search videos…" style="flex:1;max-width:320px">
+                <input type="text" id="videos-search" placeholder="व्हिडिओ शोधा…" style="flex:1;max-width:320px">
               </div>
             </div>
             <div style="overflow-x:auto">
               <table class="data-table">
                 <thead>
                   <tr>
-                    <th style="width:90px">Thumbnail</th>
-                    <th>Title / Description</th>
+                    <th style="width:90px">थंबनेल</th>
+                    <th>शीर्षक / वर्णन</th>
                     <th>YouTube URL</th>
-                    <th>Actions</th>
+                    <th>क्रिया</th>
                   </tr>
                 </thead>
                 <tbody id="videos-tbody"></tbody>
@@ -236,36 +236,36 @@
         <div class="section-page" id="section-settings">
           <div class="panel settings-card">
             <div class="panel-header">
-              <span class="panel-title">⚙️ Change Password</span>
+              <span class="panel-title">⚙️ संकेतशब्द बदला</span>
             </div>
             <div class="panel-body">
               <form id="settings-form" autocomplete="off">
                 <div class="form-group">
-                  <label for="set-current-pw">Current Password</label>
-                  <input type="password" id="set-current-pw" placeholder="Enter current password" required autocomplete="current-password">
+                  <label for="set-current-pw">सध्याचा संकेतशब्द</label>
+                  <input type="password" id="set-current-pw" placeholder="सध्याचा संकेतशब्द प्रविष्ट करा" required autocomplete="current-password">
                 </div>
                 <div class="form-group">
-                  <label for="set-new-pw">New Password</label>
-                  <input type="password" id="set-new-pw" placeholder="Enter new password" required autocomplete="new-password">
+                  <label for="set-new-pw">नवीन संकेतशब्द</label>
+                  <input type="password" id="set-new-pw" placeholder="नवीन संकेतशब्द प्रविष्ट करा" required autocomplete="new-password">
                 </div>
                 <div class="form-group">
-                  <label for="set-confirm-pw">Confirm New Password</label>
-                  <input type="password" id="set-confirm-pw" placeholder="Confirm new password" required autocomplete="new-password">
+                  <label for="set-confirm-pw">नवीन संकेतशब्द पुष्टी करा</label>
+                  <input type="password" id="set-confirm-pw" placeholder="नवीन संकेतशब्द पुष्टी करा" required autocomplete="new-password">
                 </div>
-                <button type="submit" class="btn btn-primary">💾 Save Password</button>
+                <button type="submit" class="btn btn-primary">💾 संकेतशब्द जतन करा</button>
               </form>
             </div>
           </div>
 
           <div class="panel settings-card" style="margin-top:20px">
             <div class="panel-header">
-              <span class="panel-title">ℹ️ About</span>
+              <span class="panel-title">ℹ️ विषयी</span>
             </div>
             <div class="panel-body" style="font-size:0.9rem;line-height:1.7;color:#555">
-              <p><strong>The Daily Herald Admin Panel</strong></p>
-              <p>Manage all your site content from this panel. Changes are saved instantly in your browser and reflected on the public site.</p>
+              <p><strong>दैनिक हेराल्ड प्रशासक पॅनेल</strong></p>
+              <p>या पॅनेलमधून आपली सर्व साइट सामग्री व्यवस्थापित करा. बदल त्वरित आपल्या ब्राउझरमध्ये जतन केले जातात आणि सार्वजनिक साइटवर दिसतात.</p>
               <p style="margin-top:8px">
-                <a href="../index.html" target="_blank" class="btn btn-accent btn-sm">🌐 Visit Public Site</a>
+                <a href="../index.html" target="_blank" class="btn btn-accent btn-sm">🌐 सार्वजनिक साइट पहा</a>
               </p>
             </div>
           </div>
@@ -281,33 +281,33 @@
   <div class="modal-overlay hidden" id="news-modal" role="dialog" aria-modal="true" aria-labelledby="news-modal-title">
     <div class="modal-box">
       <div class="modal-header">
-        <span class="modal-title" id="news-modal-title">Add Article</span>
-        <button class="modal-close" onclick="adminApp.closeNewsModal()" aria-label="Close">&times;</button>
+        <span class="modal-title" id="news-modal-title">लेख जोडा</span>
+        <button class="modal-close" onclick="adminApp.closeNewsModal()" aria-label="बंद करा">&times;</button>
       </div>
 
       <form id="news-form" onsubmit="return false">
         <div class="form-row">
           <div class="form-group" style="grid-column:1/-1">
-            <label for="nm-headline">Headline *</label>
-            <input type="text" id="nm-headline" placeholder="Article headline…" required>
+            <label for="nm-headline">मथळा *</label>
+            <input type="text" id="nm-headline" placeholder="लेखाचा मथळा…" required>
           </div>
         </div>
 
         <div class="form-group">
-          <label for="nm-excerpt">Excerpt / Summary</label>
-          <textarea id="nm-excerpt" rows="2" placeholder="Short summary shown on the homepage…"></textarea>
+          <label for="nm-excerpt">सारांश / थोडक्यात</label>
+          <textarea id="nm-excerpt" rows="2" placeholder="मुखपृष्ठावर दाखवला जाणारा छोटा सारांश…"></textarea>
         </div>
 
         <div class="form-group">
-          <label for="nm-content">Full Content * <small style="color:#aaa;font-weight:400">(HTML allowed, e.g. &lt;p&gt;…&lt;/p&gt;)</small></label>
-          <textarea id="nm-content" rows="7" placeholder="&lt;p&gt;Article body…&lt;/p&gt;" required></textarea>
+          <label for="nm-content">संपूर्ण सामग्री * <small style="color:#aaa;font-weight:400">(HTML अनुमत, उदा. &lt;p&gt;…&lt;/p&gt;)</small></label>
+          <textarea id="nm-content" rows="7" placeholder="&lt;p&gt;लेखाचा मजकूर…&lt;/p&gt;" required></textarea>
         </div>
 
         <div class="form-row">
           <div class="form-group">
-            <label for="nm-category">Category *</label>
+            <label for="nm-category">वर्ग *</label>
             <select id="nm-category" required>
-              <option value="">– Select –</option>
+              <option value="">– निवडा –</option>
               <option>Local</option>
               <option>Politics</option>
               <option>Business</option>
@@ -321,32 +321,32 @@
             </select>
           </div>
           <div class="form-group">
-            <label for="nm-author">Author</label>
-            <input type="text" id="nm-author" placeholder="Reporter name">
+            <label for="nm-author">लेखक</label>
+            <input type="text" id="nm-author" placeholder="वार्ताहाराचे नाव">
           </div>
         </div>
 
         <div class="form-row">
           <div class="form-group">
-            <label for="nm-date">Publish Date</label>
+            <label for="nm-date">प्रकाशन दिनांक</label>
             <input type="date" id="nm-date">
           </div>
           <div class="form-group" style="display:flex;align-items:flex-end;gap:8px;padding-bottom:2px">
             <input type="checkbox" id="nm-featured" style="width:auto;margin-bottom:8px">
-            <label for="nm-featured" style="margin-bottom:8px;cursor:pointer">⭐ Mark as Featured</label>
+            <label for="nm-featured" style="margin-bottom:8px;cursor:pointer">⭐ वैशिष्ट्यीकृत म्हणून चिन्हांकित करा</label>
           </div>
         </div>
 
         <div class="form-group">
-          <label for="nm-image-url">Image URL</label>
+          <label for="nm-image-url">प्रतिमा URL</label>
           <input type="url" id="nm-image-url" placeholder="https://…">
-          <img class="img-preview" id="nm-img-preview" alt="Image preview">
+          <img class="img-preview" id="nm-img-preview" alt="प्रतिमा पूर्वावलोकन">
         </div>
       </form>
 
       <div class="modal-footer">
-        <button class="btn btn-outline" onclick="adminApp.closeNewsModal()">Cancel</button>
-        <button class="btn btn-primary" onclick="adminApp.saveNews()">💾 Save Article</button>
+        <button class="btn btn-outline" onclick="adminApp.closeNewsModal()">रद्द करा</button>
+        <button class="btn btn-primary" onclick="adminApp.saveNews()">💾 लेख जतन करा</button>
       </div>
     </div>
   </div>
@@ -357,39 +357,39 @@
   <div class="modal-overlay hidden" id="ad-modal" role="dialog" aria-modal="true" aria-labelledby="ad-modal-title">
     <div class="modal-box">
       <div class="modal-header">
-        <span class="modal-title" id="ad-modal-title">Add Advertisement</span>
-        <button class="modal-close" onclick="adminApp.closeAdModal()" aria-label="Close">&times;</button>
+        <span class="modal-title" id="ad-modal-title">जाहिरात जोडा</span>
+        <button class="modal-close" onclick="adminApp.closeAdModal()" aria-label="बंद करा">&times;</button>
       </div>
 
       <form id="ad-form" onsubmit="return false">
         <div class="form-group">
-          <label for="am-title">Ad Title *</label>
-          <input type="text" id="am-title" placeholder="e.g. Summer Sale Banner" required>
+          <label for="am-title">जाहिरातीचे शीर्षक *</label>
+          <input type="text" id="am-title" placeholder="उदा. उन्हाळी सेल बॅनर" required>
         </div>
 
         <div class="form-group">
-          <label for="am-image-url">Image URL *</label>
+          <label for="am-image-url">प्रतिमा URL *</label>
           <input type="url" id="am-image-url" placeholder="https://…" required>
-          <img class="img-preview" id="am-img-preview" alt="Ad preview">
+          <img class="img-preview" id="am-img-preview" alt="जाहिरात पूर्वावलोकन">
         </div>
 
         <div class="form-group">
-          <label for="am-link">Destination URL</label>
-          <input type="url" id="am-link" placeholder="https://advertiser-site.com">
+          <label for="am-link">गंतव्य URL</label>
+          <input type="url" id="am-link" placeholder="https://जाहिरातदार-साइट.com">
         </div>
 
         <div class="form-group">
-          <label for="am-position">Position</label>
+          <label for="am-position">स्थान</label>
           <select id="am-position">
-            <option value="sidebar">Sidebar</option>
-            <option value="header">Header Banner</option>
+            <option value="sidebar">साइडबार</option>
+            <option value="header">हेडर बॅनर</option>
           </select>
         </div>
       </form>
 
       <div class="modal-footer">
-        <button class="btn btn-outline" onclick="adminApp.closeAdModal()">Cancel</button>
-        <button class="btn btn-primary" onclick="adminApp.saveAd()">💾 Save Ad</button>
+        <button class="btn btn-outline" onclick="adminApp.closeAdModal()">रद्द करा</button>
+        <button class="btn btn-primary" onclick="adminApp.saveAd()">💾 जाहिरात जतन करा</button>
       </div>
     </div>
   </div>
@@ -400,31 +400,31 @@
   <div class="modal-overlay hidden" id="video-modal" role="dialog" aria-modal="true" aria-labelledby="video-modal-title">
     <div class="modal-box">
       <div class="modal-header">
-        <span class="modal-title" id="video-modal-title">Add YouTube Video</span>
-        <button class="modal-close" onclick="adminApp.closeVideoModal()" aria-label="Close">&times;</button>
+        <span class="modal-title" id="video-modal-title">YouTube व्हिडिओ जोडा</span>
+        <button class="modal-close" onclick="adminApp.closeVideoModal()" aria-label="बंद करा">&times;</button>
       </div>
 
       <form id="video-form" onsubmit="return false">
         <div class="form-group">
-          <label for="vm-title">Video Title *</label>
-          <input type="text" id="vm-title" placeholder="e.g. Breaking: City Budget 2026" required>
+          <label for="vm-title">व्हिडिओ शीर्षक *</label>
+          <input type="text" id="vm-title" placeholder="उदा. तातडीच्या बातम्या: शहर अर्थसंकल्प २०२६" required>
         </div>
 
         <div class="form-group">
           <label for="vm-url">YouTube URL *</label>
           <input type="url" id="vm-url" placeholder="https://www.youtube.com/watch?v=…" required>
-          <small style="color:#aaa;font-size:0.76rem">Supports youtube.com/watch?v=, youtu.be/, or bare video ID</small>
+          <small style="color:#aaa;font-size:0.76rem">youtube.com/watch?v=, youtu.be/, किंवा व्हिडिओ ID स्वीकारतो</small>
         </div>
 
         <div class="form-group">
-          <label for="vm-desc">Description <small style="color:#aaa;font-weight:400">(optional)</small></label>
-          <textarea id="vm-desc" rows="2" placeholder="Brief description of the video…"></textarea>
+          <label for="vm-desc">वर्णन <small style="color:#aaa;font-weight:400">(पर्यायी)</small></label>
+          <textarea id="vm-desc" rows="2" placeholder="व्हिडिओचे थोडक्यात वर्णन…"></textarea>
         </div>
       </form>
 
       <div class="modal-footer">
-        <button class="btn btn-outline" onclick="adminApp.closeVideoModal()">Cancel</button>
-        <button class="btn btn-primary" onclick="adminApp.saveVideo()">💾 Save Video</button>
+        <button class="btn btn-outline" onclick="adminApp.closeVideoModal()">रद्द करा</button>
+        <button class="btn btn-primary" onclick="adminApp.saveVideo()">💾 व्हिडिओ जतन करा</button>
       </div>
     </div>
   </div>
@@ -435,11 +435,11 @@
   <div class="confirm-overlay hidden" id="confirm-overlay">
     <div class="confirm-box">
       <span class="confirm-icon">⚠️</span>
-      <h3>Confirm Delete</h3>
-      <p>Are you sure you want to delete this item? This action cannot be undone.</p>
+      <h3>हटविण्याची पुष्टी करा</h3>
+      <p>आपल्याला हा आयटम हटवायचा आहे का? ही क्रिया पूर्ववत केली जाऊ शकत नाही.</p>
       <div class="confirm-actions">
-        <button class="btn btn-outline" id="confirm-no">Cancel</button>
-        <button class="btn btn-danger" id="confirm-yes">🗑 Delete</button>
+        <button class="btn btn-outline" id="confirm-no">रद्द करा</button>
+        <button class="btn btn-danger" id="confirm-yes">🗑 हटवा</button>
       </div>
     </div>
   </div>

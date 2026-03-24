@@ -152,7 +152,7 @@
     'Other':         'cat_other'
   };
 
-  var currentLang = localStorage.getItem('ns_lang') || 'en';
+  var currentLang = localStorage.getItem('ns_lang') || 'mr';
 
   function t(key) {
     var lang = TRANSLATIONS[currentLang];
@@ -200,7 +200,7 @@
     });
 
     /* Update <html lang> attribute */
-    document.documentElement.lang = (currentLang === 'mr') ? 'mr' : 'en';
+    document.documentElement.lang = 'mr';
   }
 
   window.i18n = {

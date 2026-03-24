@@ -10,67 +10,67 @@
   const DEFAULT_NEWS = [
     {
       id: 'n1',
-      title: 'City Council Approves Major Infrastructure Plan Worth $2 Billion',
-      excerpt: 'The city council voted unanimously to approve the largest infrastructure investment in the city\'s history, covering roads, bridges and public transit.',
-      content: '<p>The city council voted unanimously on Tuesday to approve the largest infrastructure investment in the city\'s history — a sweeping $2 billion plan that will fund road repairs, bridge renovations, and a significant expansion of the public transit network over the next decade.</p><p>"This is a transformative moment for our city," said Mayor Sarah Johnson at a press conference following the vote. "These investments will create thousands of jobs and improve the daily lives of every resident."</p><p>The plan includes $800 million for road resurfacing across all twelve districts, $600 million for the renovation of seventeen structurally deficient bridges, and $600 million for new bus rapid transit corridors connecting underserved neighborhoods to the city center.</p><p>Construction is expected to begin in the spring, with the first projects — road repairs in the downtown core — slated for completion within eighteen months.</p>',
+      title: 'महापालिकेने $२ अब्ज किमतीच्या विशाल पायाभूत सुविधा योजनेस मंजुरी दिली',
+      excerpt: 'महापालिकेने शहराच्या इतिहासातील सर्वात मोठ्या पायाभूत सुविधा गुंतवणुकीस एकमताने मंजुरी दिली, ज्यामध्ये रस्ते, पूल आणि सार्वजनिक वाहतुकीच्या मोठ्या विस्ताराचा समावेश आहे.',
+      content: '<p>मंगळवारी महापालिकेने शहराच्या इतिहासातील सर्वात मोठ्या पायाभूत सुविधा गुंतवणुकीस एकमताने मंजुरी दिली — एक व्यापक $२ अब्ज योजना जी पुढील दशकात रस्ते दुरुस्ती, पुलांचे नूतनीकरण आणि सार्वजनिक वाहतूक जाळ्याचा लक्षणीय विस्तार करण्यासाठी निधी पुरवेल.</p><p>"हे आपल्या शहरासाठी एक परिवर्तनकारी क्षण आहे," मतदानानंतर पत्रकार परिषदेत महापौर सारा जॉन्सन म्हणाल्या. "या गुंतवणुकीमुळे हजारो नोकऱ्या निर्माण होतील आणि प्रत्येक रहिवाशाचे दैनंदिन जीवन सुधारेल."</p><p>योजनेत सर्व बारा जिल्ह्यांमध्ये रस्ते पुनर्रचनेसाठी $८०० कोटी, सतरा संरचनात्मकदृष्ट्या दोषपूर्ण पुलांच्या नूतनीकरणासाठी $६०० कोटी, आणि शहर केंद्राशी वंचित परिसर जोडणाऱ्या नवीन बस जलद वाहतूक मार्गांसाठी $६०० कोटी यांचा समावेश आहे.</p><p>बांधकाम वसंत ऋतूमध्ये सुरू होण्याची अपेक्षा आहे, पहिले प्रकल्प — शहरी केंद्रात रस्ते दुरुस्ती — अठरा महिन्यांत पूर्ण होणे अपेक्षित आहे.</p>',
       category: 'Local',
       image: 'https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=800&q=80',
-      author: 'John Martinez',
+      author: 'जॉन मार्टिनेझ',
       date: '2026-03-24',
       featured: true
     },
     {
       id: 'n2',
-      title: 'Technology Giants Announce Joint AI Safety Initiative',
-      excerpt: 'Five of the world\'s largest technology companies have pledged $500 million toward a new independent AI safety research institute.',
-      content: '<p>Five of the world\'s largest technology companies announced on Monday a joint pledge of $500 million to establish an independent AI safety research institute, in what experts are calling the most significant voluntary commitment to responsible AI development to date.</p><p>The new institute, to be named the Global AI Safety Foundation, will focus on developing technical tools to detect and mitigate risks from advanced AI systems, including bias, misuse, and unintended behaviors.</p><p>"The development of AI is accelerating faster than our ability to understand its risks," said Dr. Elena Vasquez, who will serve as the Foundation\'s inaugural director. "This institute will bring together the world\'s leading researchers to change that."</p><p>The initiative has drawn praise from governments and civil society groups, though some critics argue that an industry-funded body cannot be truly independent.</p>',
+      title: 'तंत्रज्ञान दिग्गजांनी संयुक्त AI सुरक्षा उपक्रमाची घोषणा केली',
+      excerpt: 'जगातील पाच सर्वात मोठ्या तंत्रज्ञान कंपन्यांनी नवीन स्वतंत्र AI सुरक्षा संशोधन संस्थेसाठी $५०० कोटी देण्याचे वचन दिले.',
+      content: '<p>जगातील पाच सर्वात मोठ्या तंत्रज्ञान कंपन्यांनी सोमवारी एक स्वतंत्र AI सुरक्षा संशोधन संस्था स्थापन करण्यासाठी संयुक्तपणे $५०० कोटी देण्याची घोषणा केली — तज्ञ याला जबाबदार AI विकासाची आजपर्यंतची सर्वात महत्त्वपूर्ण स्वेच्छा बांधिलकी म्हणतात.</p><p>नवीन संस्था, ज्याला ग्लोबल AI सेफ्टी फाउंडेशन असे नाव दिले जाईल, प्रगत AI प्रणालींमधील जोखीम शोधण्यासाठी आणि कमी करण्यासाठी तांत्रिक साधने विकसित करण्यावर लक्ष केंद्रित करेल.</p><p>"AI चा विकास आपल्या जोखीम समजण्याच्या क्षमतेपेक्षा वेगाने होत आहे," डॉ. एलेना वास्क्वेझ, जी फाउंडेशनची पहिली संचालक म्हणून काम करतील, असे म्हणाल्या. "ही संस्था जगातील अग्रगण्य संशोधकांना एकत्र आणेल."</p><p>या उपक्रमाला सरकार आणि नागरी समाज गटांनी प्रशंसा दिली आहे, जरी काही समीक्षकांचे म्हणणे आहे की उद्योगाने वित्तपुरवठा केलेली संस्था खरोखरच स्वतंत्र असू शकत नाही.</p>',
       category: 'Technology',
       image: 'https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=800&q=80',
-      author: 'Priya Sharma',
+      author: 'प्रिया शर्मा',
       date: '2026-03-23',
       featured: true
     },
     {
       id: 'n3',
-      title: 'National Football League Expands to Two New Cities',
-      excerpt: 'The NFL announced franchises in two new markets, marking the league\'s first expansion in over two decades.',
-      content: '<p>The National Football League announced Wednesday that it will expand to two new cities — Portland, Oregon and San Antonio, Texas — in what will be the league\'s first expansion in more than twenty years. Both new teams are expected to begin play in the 2028 season.</p><p>The expansion was approved by a 30–2 owner vote at the league\'s annual meeting in Phoenix. Each new franchise fee is reported to be $3.5 billion, setting a new record for a professional sports franchise.</p><p>"These are two passionate football markets that have proven time and again their appetite for the game," said Commissioner Roger Ellis. "We\'re thrilled to welcome them into the NFL family."</p><p>Portland and San Antonio beat out bids from a dozen other cities including St. Louis, which lost its Rams franchise in 2016.</p>',
+      title: 'नॅशनल फुटबॉल लीगचा दोन नव्या शहरांमध्ये विस्तार',
+      excerpt: 'NFL ने दोन नवीन बाजारपेठांमध्ये फ्रँचाइझींची घोषणा केली, लीगच्या दोन दशकांहून अधिक काळातील पहिल्या विस्ताराची नोंद केली.',
+      content: '<p>नॅशनल फुटबॉल लीगने बुधवारी घोषणा केली की ती दोन नवीन शहरांमध्ये विस्तार करेल — ओरेगॉनचे पोर्टलँड आणि टेक्सासचे सॅन अँटोनिओ — जे लीगचे वीसहून अधिक वर्षांतील पहिले विस्तार असेल. दोन्ही नवीन संघ २०२८ सत्रात खेळण्यास सुरुवात करणे अपेक्षित आहे.</p><p>विस्तारास फिनिक्समधील लीगच्या वार्षिक बैठकीत ३०-२ मालक मतांनी मंजुरी मिळाली. प्रत्येक नवीन फ्रँचाइझी शुल्क $३.५ अब्ज असल्याचे सांगण्यात येते, व्यावसायिक क्रीडा फ्रँचाइझीसाठी नवीन विक्रम.</p><p>"हे दोन उत्साही फुटबॉल बाजारपेठ आहेत ज्यांनी वेळोवेळी खेळासाठी त्यांची आवड सिद्ध केली आहे," कमिशनर रॉजर एलिस म्हणाले. "त्यांना NFL कुटुंबात स्वागत करताना आम्हाला आनंद होत आहे."</p><p>पोर्टलँड आणि सॅन अँटोनिओने सेंट लुईससह डझनभर इतर शहरांच्या बोलींवर मात केली, ज्याने २०१६ मध्ये त्याची रॅम्स फ्रँचाइझी गमावली होती.</p>',
       category: 'Sports',
       image: 'https://images.unsplash.com/photo-1566577739112-5180d4bf9390?w=800&q=80',
-      author: 'Mike Thompson',
+      author: 'मायकेल थॉम्पसन',
       date: '2026-03-23',
       featured: false
     },
     {
       id: 'n4',
-      title: 'New Study Links Mediterranean Diet to Reduced Dementia Risk',
-      excerpt: 'Researchers from ten universities found that adhering closely to a Mediterranean diet can reduce the risk of dementia by up to 28 percent.',
-      content: '<p>A landmark study involving more than 60,000 adults over fifteen years has found that closely following a Mediterranean diet — rich in vegetables, legumes, whole grains, fish, and olive oil — is associated with up to a 28 percent reduction in the risk of developing dementia.</p><p>The research, published in the journal Nature Medicine, was conducted by scientists from ten universities across Europe and North America and is the largest of its kind to date.</p><p>"What we eat has a profound impact on the health of our brains as we age," said lead researcher Dr. Amelia Chen of Oxford University. "These findings add powerful evidence to the case for dietary intervention as a public health strategy."</p><p>The study controlled for factors including physical activity, smoking, education level, and genetic predisposition to Alzheimer\'s disease.</p>',
+      title: 'नवीन अभ्यासात भूमध्यसागरीय आहार आणि स्मृतिभ्रंशाच्या कमी जोखमीचा संबंध',
+      excerpt: 'दहा विद्यापीठांच्या संशोधकांना असे आढळले की भूमध्यसागरीय आहाराचे काटेकोरपणे पालन केल्यास स्मृतिभ्रंशाचा धोका २८ टक्क्यांपर्यंत कमी होऊ शकतो.',
+      content: '<p>पंधरा वर्षांत ६०,००० पेक्षा अधिक प्रौढांचा समावेश असलेल्या एका ऐतिहासिक अभ्यासात असे आढळले की भूमध्यसागरीय आहाराचे — भाज्या, शेंगा, संपूर्ण धान्ये, मासे आणि ऑलिव्ह तेल यांनी समृद्ध — काटेकोरपणे पालन केल्यास स्मृतिभ्रंश विकसित होण्याच्या जोखमीत २८ टक्क्यांपर्यंत घट होऊ शकते.</p><p>नेचर मेडिसिन या जर्नलमध्ये प्रकाशित हे संशोधन युरोप आणि उत्तर अमेरिकेतील दहा विद्यापीठांच्या शास्त्रज्ञांनी केले आणि आजपर्यंतचे आपल्या प्रकारचे सर्वात मोठे संशोधन आहे.</p><p>"आपण काय खातो याचा आपण वय वाढत असताना आपल्या मेंदूच्या आरोग्यावर खोलवर परिणाम होतो," ऑक्सफर्ड विद्यापीठाच्या मुख्य संशोधक डॉ. अमेलिया चेन म्हणाल्या. "हे निष्कर्ष सार्वजनिक आरोग्य धोरण म्हणून आहारातील हस्तक्षेपाच्या बाजूने शक्तिशाली पुरावे जोडतात."</p><p>अभ्यासात शारीरिक क्रियाकलाप, धूम्रपान, शिक्षण पातळी आणि अल्झायमर रोगाची अनुवांशिक पूर्वस्थिती यासारख्या घटकांवर नियंत्रण ठेवण्यात आले.</p>',
       category: 'Health',
       image: 'https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=800&q=80',
-      author: 'Lisa Park',
+      author: 'लिसा पार्क',
       date: '2026-03-22',
       featured: false
     },
     {
       id: 'n5',
-      title: 'Stock Markets Hit Record Highs on Strong Jobs Data',
-      excerpt: 'Wall Street surged to all-time records after government data showed employers added 380,000 jobs last month, far exceeding analyst expectations.',
-      content: '<p>U.S. stock markets surged to record highs on Friday after a surprisingly strong jobs report showed employers added 380,000 positions last month — nearly double the 200,000 gain that analysts had anticipated — and the unemployment rate fell to 3.4 percent, its lowest level in fifty years.</p><p>The S&P 500 gained 1.8 percent to close at a new all-time high, while the Dow Jones Industrial Average rose 620 points. The Nasdaq Composite climbed 2.1 percent, led by a rally in technology shares.</p><p>"This is as good as it gets for the labor market," said Karen White, chief economist at First National Securities. "The breadth of job gains across sectors suggests this expansion has real staying power."</p><p>The Federal Reserve is expected to keep interest rates steady at its next meeting following the robust economic data.</p>',
+      title: 'मजबूत रोजगार डेटामुळे शेअर बाजार नव्या उच्चांकावर',
+      excerpt: 'सरकारी आकडेवारीनुसार गेल्या महिन्यात नियोक्त्यांनी ३,८०,००० नोकऱ्या जोडल्या, विश्लेषकांच्या अपेक्षांपेक्षा खूप जास्त, त्यामुळे वॉल स्ट्रीट विक्रमी उच्चांकावर पोहोचले.',
+      content: '<p>शुक्रवारी एक आश्चर्यकारकरीत्या मजबूत रोजगार अहवालानंतर अमेरिकन शेअर बाजार नव्या उच्चांकावर पोहोचले — गेल्या महिन्यात नियोक्त्यांनी ३,८०,००० पदे भरली — विश्लेषकांनी अपेक्षित केलेल्या २,००,००० लाभापेक्षा जवळजवळ दुप्पट — आणि बेरोजगारीचा दर ५० वर्षांतील नीचांकावर ३.४ टक्क्यांवर घसरला.</p><p>S&P ५०० ने १.८ टक्के वाढ नोंदवून नव्या सर्वकालीन उच्चांकावर बंद झाले, तर डाऊ जोन्स इंडस्ट्रियल अव्हरेज ६२० अंकांनी वधारले. नॅस्डॅक कम्पोझिट तंत्रज्ञान समभागांमधील वाढीच्या नेतृत्वात २.१ टक्के वधारले.</p><p>"श्रमिक बाजारासाठी हे अत्युत्तम आहे," फर्स्ट नॅशनल सिक्युरिटीजच्या मुख्य अर्थशास्त्रज्ञ करेन व्हाईट म्हणाल्या. "क्षेत्रांमधील रोजगार लाभाची विस्तृतता सुचवते की या विस्तारामध्ये खरी ताकद आहे."</p><p>मजबूत आर्थिक डेटानंतर फेडरल रिझर्व्ह आपल्या पुढील बैठकीत व्याजदर स्थिर ठेवण्याची अपेक्षा आहे.</p>',
       category: 'Business',
       image: 'https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=800&q=80',
-      author: 'Robert Chen',
+      author: 'रॉबर्ट चेन',
       date: '2026-03-22',
       featured: false
     },
     {
       id: 'n6',
-      title: 'Renowned Filmmaker Announces Ambitious 10-Part Series on Climate Change',
-      excerpt: 'Award-winning director Anna Kovacs will spend three years creating a documentary series exploring climate solutions from every continent.',
-      content: '<p>Academy Award-winning director Anna Kovacs announced Monday that she will spend the next three years producing a ten-part documentary series that will travel to every continent to examine both the devastating impacts of climate change and the innovative solutions communities are developing in response.</p><p>"I want to tell the stories of the people on the frontlines — the farmers in Bangladesh adapting to rising seas, the engineers in Denmark building offshore wind farms, the Indigenous communities in the Amazon protecting the lungs of our planet," said Kovacs at a press conference in New York.</p><p>The series, tentatively titled Earth in Balance, will be distributed globally through a major streaming platform. Production begins this summer.</p>',
+      title: 'प्रसिद्ध चित्रपट निर्मात्याने हवामान बदलावर महत्त्वाकांक्षी १०-भागांच्या माहितीपट मालिकेची घोषणा केली',
+      excerpt: 'पुरस्कारविजेत्या दिग्दर्शिका अण्णा कोवाक्स प्रत्येक खंडावरून हवामान उपायांचा शोध घेणारी माहितीपट मालिका तयार करण्यासाठी तीन वर्षे घालवतील.',
+      content: '<p>अकादमी पुरस्कारविजेत्या दिग्दर्शिका अण्णा कोवाक्स यांनी सोमवारी घोषणा केली की त्या पुढील तीन वर्षे एक दहा-भागांची माहितीपट मालिका निर्माण करण्यासाठी घालवतील जी हवामान बदलाचे विनाशकारी परिणाम आणि समुदाय त्यांना प्रतिसाद म्हणून विकसित करत असलेले नाविन्यपूर्ण उपाय दोन्ही तपासण्यासाठी प्रत्येक खंडावर जाईल.</p><p>"मला आघाडीवर असलेल्या लोकांच्या कथा सांगायच्या आहेत — बांग्लादेशातील शेतकरी जे वाढत्या समुद्राशी जुळवून घेत आहेत, डेन्मार्कमधील अभियंते जे ऑफशोर पवन फार्म बांधत आहेत, ॲमेझॉनमधील स्थानिक समुदाय आपल्या ग्रहाच्या फुफ्फुसांचे रक्षण करत आहेत," न्यूयॉर्कमधील पत्रकार परिषदेत कोवाक्स म्हणाल्या.</p><p>पृथ्वी शिल्लक असे तात्पुरत्या नावाने ओळखली जाणारी ही मालिका, एका प्रमुख स्ट्रीमिंग प्लॅटफॉर्मद्वारे जागतिक स्तरावर वितरित केली जाईल. या उन्हाळ्यात निर्मिती सुरू होणार आहे.</p>',
       category: 'Entertainment',
       image: 'https://images.unsplash.com/photo-1536440136628-849c177e76a1?w=800&q=80',
-      author: 'Emma Wilson',
+      author: 'एम्मा विल्सन',
       date: '2026-03-21',
       featured: false
     }
@@ -79,21 +79,21 @@
   const DEFAULT_ADS = [
     {
       id: 'a1',
-      title: 'Premium Real Estate',
+      title: 'प्रीमियम रिअल इस्टेट',
       image: 'https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=400&q=80',
       link: '#',
       position: 'sidebar'
     },
     {
       id: 'a2',
-      title: 'Auto Insurance Quote',
+      title: 'वाहन विमा कोटेशन',
       image: 'https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=400&q=80',
       link: '#',
       position: 'sidebar'
     },
     {
       id: 'a3',
-      title: 'Travel the World',
+      title: 'जगाची सफर करा',
       image: 'https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=800&q=80',
       link: '#',
       position: 'header'
@@ -103,14 +103,14 @@
   const DEFAULT_VIDEOS = [
     {
       id: 'v1',
-      title: 'Breaking News: Global Summit on Climate Policy',
-      description: 'World leaders gather to discuss new emissions targets.',
+      title: 'तातडीच्या बातम्या: हवामान धोरणावरील जागतिक शिखर परिषद',
+      description: 'जागतिक नेते नवीन उत्सर्जन लक्ष्यांवर चर्चा करण्यासाठी एकत्र आले.',
       youtubeId: 'dQw4w9WgXcQ'
     },
     {
       id: 'v2',
-      title: 'City Mayor Press Conference – Infrastructure Plan',
-      description: 'Live coverage of the mayor\'s announcement.',
+      title: 'शहर महापौरांची पत्रकार परिषद – पायाभूत सुविधा योजना',
+      description: 'महापौरांच्या घोषणेचे थेट प्रसारण.',
       youtubeId: 'ysz5S6PUM-U'
     }
   ];
@@ -406,8 +406,7 @@
   function formatDate(str) {
     if (!str) return '';
     try {
-      const locale = (window.i18n && window.i18n.getLang() === 'mr') ? 'mr-IN' : 'en-US';
-      return new Date(str + 'T00:00:00').toLocaleDateString(locale, {
+      return new Date(str + 'T00:00:00').toLocaleDateString('mr-IN', {
         year: 'numeric', month: 'long', day: 'numeric'
       });
     } catch (_) { return str; }
