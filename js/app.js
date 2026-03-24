@@ -115,6 +115,14 @@
     }
   ];
 
+  /* ── i18n helper (graceful fallback if i18n.js not loaded) ──── */
+  function t(key) {
+    return (window.i18n && window.i18n.t) ? window.i18n.t(key) : key;
+  }
+  function tCat(cat) {
+    return (window.i18n && window.i18n.tCategory) ? window.i18n.tCategory(cat) : cat;
+  }
+
   /* ── Storage helpers ─────────────────────────────────────────── */
   function getData(key, def) {
     try {
@@ -164,6 +172,11 @@
 
     renderAll();
     bindEvents();
+
+    // Apply translations to static HTML elements after everything is ready
+    if (window.i18n && window.i18n.applyStaticTranslations) {
+      window.i18n.applyStaticTranslations();
+    }
   }
 
   /* ── Render everything ───────────────────────────────────────── */
@@ -196,7 +209,7 @@
   function renderTicker() {
     if (!tickerContent) return;
     const items = allNews.slice(0, 6).map(n => `<span style="margin-right:60px">📰 ${escHtml(n.title)}</span>`).join('');
-    tickerContent.innerHTML = items || '<span>Welcome to our news site. Stay informed.</span>';
+    tickerContent.innerHTML = items || `<span>${escHtml(t('ticker_welcome'))}</span>`;
   }
 
   /* ── Featured news ───────────────────────────────────────────── */
@@ -207,7 +220,7 @@
     const sides = (featured.length > 1 ? featured.slice(1) : allNews.slice(1)).slice(0, 2);
 
     if (!main) {
-      featuredGrid.innerHTML = '<p class="empty-state">No news published yet.</p>';
+      featuredGrid.innerHTML = `<p class="empty-state">${escHtml(t('no_news'))}</p>`;
       return;
     }
 
@@ -219,7 +232,7 @@
           <span class="news-category">${escHtml(main.category)}</span>
           <h2 class="news-title">${escHtml(main.title)}</h2>
           <p class="news-excerpt">${escHtml(main.excerpt)}</p>
-          <p class="news-meta">By ${escHtml(main.author)} &nbsp;·&nbsp; ${formatDate(main.date)}</p>
+          <p class="news-meta">${escHtml(t('by'))} ${escHtml(main.author)} &nbsp;·&nbsp; ${formatDate(main.date)}</p>
         </div>
       </div>`;
 
@@ -231,7 +244,7 @@
           <div class="news-body">
             <span class="news-category">${escHtml(n.category)}</span>
             <h3 class="news-title">${escHtml(n.title)}</h3>
-            <p class="news-meta">By ${escHtml(n.author)} &nbsp;·&nbsp; ${formatDate(n.date)}</p>
+            <p class="news-meta">${escHtml(t('by'))} ${escHtml(n.author)} &nbsp;·&nbsp; ${formatDate(n.date)}</p>
           </div>
         </div>`;
     });
@@ -245,7 +258,7 @@
     const categories = ['All', ...new Set(allNews.map(n => n.category))];
     categoryFilter.innerHTML = categories.map(c => `
       <button class="cat-btn${c === activeCategory ? ' active' : ''}"
-              onclick="app.setCategory('${escHtml(c)}')">${escHtml(c)}</button>
+              onclick="app.setCategory('${escHtml(c)}')">${escHtml(tCat(c))}</button>
     `).join('');
   }
 
@@ -268,7 +281,7 @@
     }
 
     if (!items.length) {
-      newsGrid.innerHTML = '<p class="empty-state">No articles found.</p>';
+      newsGrid.innerHTML = `<p class="empty-state">${escHtml(t('no_articles'))}</p>`;
       return;
     }
 
@@ -279,7 +292,7 @@
         <div class="card-body">
           <span class="card-category">${escHtml(n.category)}</span>
           <h3 class="card-title">${escHtml(n.title)}</h3>
-          <p class="card-meta">By ${escHtml(n.author)} &nbsp;·&nbsp; ${formatDate(n.date)}</p>
+          <p class="card-meta">${escHtml(t('by'))} ${escHtml(n.author)} &nbsp;·&nbsp; ${formatDate(n.date)}</p>
         </div>
       </div>
     `).join('');
@@ -290,7 +303,7 @@
     if (!sidebarAds) return;
     const ads = allAds.filter(a => a.position === 'sidebar');
     if (!ads.length) {
-      sidebarAds.innerHTML = '<p style="color:#bbb;font-size:0.82rem;text-align:center">No ads available.</p>';
+      sidebarAds.innerHTML = `<p style="color:#bbb;font-size:0.82rem;text-align:center">${escHtml(t('no_ads'))}</p>`;
       return;
     }
     sidebarAds.innerHTML = ads.map(a => `
@@ -308,7 +321,7 @@
   function renderSidebarVideos() {
     if (!sidebarVideos) return;
     if (!allVideos.length) {
-      sidebarVideos.innerHTML = '<p style="color:#bbb;font-size:0.82rem;text-align:center">No videos available.</p>';
+      sidebarVideos.innerHTML = `<p style="color:#bbb;font-size:0.82rem;text-align:center">${escHtml(t('no_videos'))}</p>`;
       return;
     }
     sidebarVideos.innerHTML = allVideos.map(v => `
@@ -333,7 +346,7 @@
 
     document.getElementById('modal-category').textContent  = article.category;
     document.getElementById('modal-title').textContent     = article.title;
-    document.getElementById('modal-meta').textContent      = `By ${article.author}  ·  ${formatDate(article.date)}`;
+    document.getElementById('modal-meta').textContent      = `${t('by')} ${article.author}  ·  ${formatDate(article.date)}`;
     document.getElementById('modal-img').src               = article.image;
     document.getElementById('modal-img').alt               = article.title;
     document.getElementById('modal-content').innerHTML     = article.content;
@@ -393,7 +406,8 @@
   function formatDate(str) {
     if (!str) return '';
     try {
-      return new Date(str + 'T00:00:00').toLocaleDateString('en-US', {
+      const locale = (window.i18n && window.i18n.getLang() === 'mr') ? 'mr-IN' : 'en-US';
+      return new Date(str + 'T00:00:00').toLocaleDateString(locale, {
         year: 'numeric', month: 'long', day: 'numeric'
       });
     } catch (_) { return str; }
