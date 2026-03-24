@@ -13,8 +13,12 @@
   <div class="top-bar">
     <div class="container">
       <span id="current-date"></span>
-      <span>
-        <a href="admin/index.html">Admin</a>
+      <span class="top-bar-right">
+        <a href="admin/index.html" data-i18n="admin">Admin</a>
+        <span class="lang-switcher" aria-label="Select language">
+          <button class="lang-btn" data-lang="en" onclick="i18n.setLang('en');return false">EN</button>
+          <button class="lang-btn" data-lang="mr" onclick="i18n.setLang('mr');return false">मराठी</button>
+        </span>
       </span>
     </div>
   </div>
@@ -24,7 +28,7 @@
     <div class="container header-inner">
       <div>
         <div class="site-logo">The Daily <span>Herald</span></div>
-        <div class="site-tagline">Truth · Accuracy · Independence</div>
+        <div class="site-tagline" data-i18n="tagline">Truth · Accuracy · Independence</div>
       </div>
       <div id="header-ad" class="header-ad" style="display:none"></div>
     </div>
@@ -34,22 +38,22 @@
   <nav class="main-nav">
     <div class="container">
       <ul class="nav-list" id="nav-list">
-        <li><a href="#" class="active" onclick="app.setCategory('All');return false">Home</a></li>
-        <li><a href="#" onclick="app.setCategory('Local');return false">Local</a></li>
-        <li><a href="#" onclick="app.setCategory('Politics');return false">Politics</a></li>
-        <li><a href="#" onclick="app.setCategory('Business');return false">Business</a></li>
-        <li><a href="#" onclick="app.setCategory('Technology');return false">Technology</a></li>
-        <li><a href="#" onclick="app.setCategory('Sports');return false">Sports</a></li>
-        <li><a href="#" onclick="app.setCategory('Health');return false">Health</a></li>
-        <li><a href="#" onclick="app.setCategory('Entertainment');return false">Entertainment</a></li>
-        <li><a href="#" onclick="app.setCategory('World');return false">World</a></li>
+        <li><a href="#" class="active" onclick="app.setCategory('All');return false" data-i18n="nav_home">Home</a></li>
+        <li><a href="#" onclick="app.setCategory('Local');return false" data-i18n="nav_local">Local</a></li>
+        <li><a href="#" onclick="app.setCategory('Politics');return false" data-i18n="nav_politics">Politics</a></li>
+        <li><a href="#" onclick="app.setCategory('Business');return false" data-i18n="nav_business">Business</a></li>
+        <li><a href="#" onclick="app.setCategory('Technology');return false" data-i18n="nav_technology">Technology</a></li>
+        <li><a href="#" onclick="app.setCategory('Sports');return false" data-i18n="nav_sports">Sports</a></li>
+        <li><a href="#" onclick="app.setCategory('Health');return false" data-i18n="nav_health">Health</a></li>
+        <li><a href="#" onclick="app.setCategory('Entertainment');return false" data-i18n="nav_entertainment">Entertainment</a></li>
+        <li><a href="#" onclick="app.setCategory('World');return false" data-i18n="nav_world">World</a></li>
       </ul>
     </div>
   </nav>
 
   <!-- BREAKING NEWS TICKER -->
   <div class="breaking-bar">
-    <span class="breaking-label">Breaking</span>
+    <span class="breaking-label" data-i18n="breaking">Breaking</span>
     <div class="ticker-wrap">
       <span class="ticker-content" id="ticker-content"></span>
     </div>
@@ -63,7 +67,7 @@
 
       <!-- Featured -->
       <section class="featured-section">
-        <h2 class="section-heading">Top Stories</h2>
+        <h2 class="section-heading" data-i18n="top_stories">Top Stories</h2>
         <div class="featured-grid" id="featured-grid">
           <!-- Populated by app.js -->
         </div>
@@ -71,12 +75,12 @@
 
       <!-- Latest News -->
       <section class="latest-section">
-        <h2 class="section-heading">Latest News</h2>
+        <h2 class="section-heading" data-i18n="latest_news">Latest News</h2>
 
         <!-- Search -->
         <div class="search-bar">
           <input type="text" id="search-input" placeholder="Search articles…" aria-label="Search articles">
-          <button id="search-btn">🔍 Search</button>
+          <button id="search-btn" data-i18n="search_btn">🔍 Search</button>
         </div>
 
         <!-- Category filter -->
@@ -97,7 +101,7 @@
 
       <!-- Ads -->
       <div class="sidebar-widget">
-        <div class="widget-title">Advertisement</div>
+        <div class="widget-title" data-i18n="advertisement">Advertisement</div>
         <div class="widget-body" id="sidebar-ads">
           <!-- Populated by app.js -->
         </div>
@@ -105,7 +109,7 @@
 
       <!-- Videos -->
       <div class="sidebar-widget">
-        <div class="widget-title">📺 Watch Videos</div>
+        <div class="widget-title" data-i18n="watch_videos">📺 Watch Videos</div>
         <div class="widget-body" id="sidebar-videos">
           <!-- Populated by app.js -->
         </div>
@@ -132,36 +136,36 @@
     <div class="container">
       <div class="footer-top">
         <div class="footer-col">
-          <h4>The Daily Herald</h4>
-          <p>Your trusted, independent news source since 1985. Committed to factual, balanced journalism that serves the public interest.</p>
+          <h4 data-i18n="footer_brand">The Daily Herald</h4>
+          <p data-i18n="footer_about">Your trusted, independent news source since 1985. Committed to factual, balanced journalism that serves the public interest.</p>
         </div>
         <div class="footer-col">
-          <h4>Sections</h4>
+          <h4 data-i18n="footer_sections">Sections</h4>
           <ul>
-            <li><a href="#" onclick="app.setCategory('Local');return false">Local</a></li>
-            <li><a href="#" onclick="app.setCategory('Politics');return false">Politics</a></li>
-            <li><a href="#" onclick="app.setCategory('Business');return false">Business</a></li>
-            <li><a href="#" onclick="app.setCategory('Technology');return false">Technology</a></li>
-            <li><a href="#" onclick="app.setCategory('Sports');return false">Sports</a></li>
+            <li><a href="#" onclick="app.setCategory('Local');return false" data-i18n="nav_local">Local</a></li>
+            <li><a href="#" onclick="app.setCategory('Politics');return false" data-i18n="nav_politics">Politics</a></li>
+            <li><a href="#" onclick="app.setCategory('Business');return false" data-i18n="nav_business">Business</a></li>
+            <li><a href="#" onclick="app.setCategory('Technology');return false" data-i18n="nav_technology">Technology</a></li>
+            <li><a href="#" onclick="app.setCategory('Sports');return false" data-i18n="nav_sports">Sports</a></li>
           </ul>
         </div>
         <div class="footer-col">
-          <h4>More</h4>
+          <h4 data-i18n="footer_more">More</h4>
           <ul>
-            <li><a href="#" onclick="app.setCategory('Health');return false">Health</a></li>
-            <li><a href="#" onclick="app.setCategory('Entertainment');return false">Entertainment</a></li>
-            <li><a href="#" onclick="app.setCategory('World');return false">World</a></li>
-            <li><a href="admin/index.html">Admin Panel</a></li>
+            <li><a href="#" onclick="app.setCategory('Health');return false" data-i18n="nav_health">Health</a></li>
+            <li><a href="#" onclick="app.setCategory('Entertainment');return false" data-i18n="nav_entertainment">Entertainment</a></li>
+            <li><a href="#" onclick="app.setCategory('World');return false" data-i18n="nav_world">World</a></li>
+            <li><a href="admin/index.html" data-i18n="admin_panel">Admin Panel</a></li>
           </ul>
         </div>
         <div class="footer-col">
-          <h4>Contact</h4>
-          <p>newsdesk@dailyherald.example<br>+1 (555) 000-1234<br>123 Press Avenue, News City, NC 12345</p>
+          <h4 data-i18n="footer_contact">Contact</h4>
+          <p data-i18n="footer_contact_info" data-i18n-html>newsdesk@dailyherald.example<br>+1 (555) 000-1234<br>123 Press Avenue, News City, NC 12345</p>
         </div>
       </div>
       <div class="footer-bottom">
-        <p>© <span id="current-year"></span> The Daily Herald. All rights reserved.
-          &nbsp;|&nbsp; <a href="admin/index.html">Admin</a>
+        <p>© <span id="current-year"></span> The Daily Herald. <span data-i18n="footer_rights">All rights reserved.</span>
+          &nbsp;|&nbsp; <a href="admin/index.html" data-i18n="admin">Admin</a>
         </p>
       </div>
     </div>
@@ -172,6 +176,7 @@
     document.getElementById('current-date').textContent =
       new Date().toLocaleDateString('en-US', { weekday:'long', year:'numeric', month:'long', day:'numeric' });
   </script>
+  <script src="js/i18n.js"></script>
   <script src="js/app.js"></script>
 </body>
 </html>
