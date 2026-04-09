@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="mr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Your trusted source for local and world news — politics, business, technology, sports, health and more.">
-  <title>The Daily Herald – Breaking News &amp; Latest Headlines</title>
+  <meta name="description" content="स्थानिक आणि जागतिक बातम्यांसाठी आपला विश्वासू स्रोत — राजकारण, व्यवसाय, तंत्रज्ञान, क्रीडा, आरोग्य आणि बरेच काही.">
+  <title>दैनिक – ताज्या बातम्या आणि ताजे मथळे</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -14,11 +14,7 @@
     <div class="container">
       <span id="current-date"></span>
       <span class="top-bar-right">
-        <a href="admin/index.html" data-i18n="admin">Admin</a>
-        <span class="lang-switcher" aria-label="Select language">
-          <button class="lang-btn" data-lang="en" onclick="i18n.setLang('en');return false">EN</button>
-          <button class="lang-btn" data-lang="mr" onclick="i18n.setLang('mr');return false">मराठी</button>
-        </span>
+        <a href="admin/index.html" data-i18n="admin">प्रशासक</a>
       </span>
     </div>
   </div>
@@ -27,7 +23,7 @@
   <header>
     <div class="container header-inner">
       <div>
-        <div class="site-logo">The Daily <span>Herald</span></div>
+        <div class="site-logo">दैनिक </div>
         <div class="site-tagline" data-i18n="tagline">Truth · Accuracy · Independence</div>
       </div>
       <div id="header-ad" class="header-ad" style="display:none"></div>
@@ -164,17 +160,17 @@
         </div>
       </div>
       <div class="footer-bottom">
-        <p>© <span id="current-year"></span> The Daily Herald. <span data-i18n="footer_rights">All rights reserved.</span>
-          &nbsp;|&nbsp; <a href="admin/index.html" data-i18n="admin">Admin</a>
+        <p>© <span id="current-year"></span> दैनिक <span data-i18n="footer_rights">सर्व हक्क राखीव.</span>
+          &nbsp;|&nbsp; <a href="admin/index.html" data-i18n="admin">प्रशासक</a>
         </p>
       </div>
     </div>
   </footer>
 
   <script>
-    // Show today's date in top bar
+    // Show today's date in top bar (Marathi locale)
     document.getElementById('current-date').textContent =
-      new Date().toLocaleDateString('en-US', { weekday:'long', year:'numeric', month:'long', day:'numeric' });
+      new Date().toLocaleDateString('mr-IN', { weekday:'long', year:'numeric', month:'long', day:'numeric' });
   </script>
   <script src="js/i18n.js"></script>
   <script src="js/app.js"></script>
